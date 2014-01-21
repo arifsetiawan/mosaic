@@ -6,12 +6,12 @@ Simple Node.js based social graph and activity stream API server
 
 ## Functionalities
 
-* user activity stream CRUD
+* user activity stream (insert and get)
 * maintain user following followers
 
 ## Activity Stream
 
-Mosaic do not handle the details of the activity stream. It simply just doing CRUD on them. It defines some necessary field to make some query easier. 
+Mosaic do not handle the details of the activity stream. It simply just doing insert and get on them. It defines some necessary field to make some query easier. 
 
 Mosaic follows [Activity Streams definition of activity](http://activitystrea.ms/specs/json/1.0/)
 
@@ -20,7 +20,7 @@ Mosaic follows [Activity Streams definition of activity](http://activitystrea.ms
 Required field in activity are : `title`, `actor`, `verb`, `object`, `target`, `privacy`.
 Refer to [Activity Serialization](http://activitystrea.ms/specs/json/1.0/#activity) for details about each field.
 
-`actor`, `object` and `target` MUST have id field
+`actor`, `object` and `target` MUST have id field. Application are free to add other fields. 
 
 User empty json object if `target` is not exists
 
@@ -59,6 +59,37 @@ User empty json object if `target` is not exists
     "privacy":"public"
   }
 
+```
+
+```
+  {
+    "title": "Helmi follow Andri",
+    "actor": {
+      "objectType": "user",
+      "id": "user:id:123",
+      "displayName": "Kang Helmi",
+      "other key": "other value",
+      "image": {
+        "url": "http://example.org/user/thumbnail.jpg",
+        "width": 250,
+        "height": 250
+      }
+    },
+    "verb": "follow",
+    "object": {
+      "objectType": "user",
+      "id": "user:id:234",
+      "displayName": "Andri",
+      "image": {
+        "url": "http://example.org/album/thumbnail.jpg",
+        "width": 250,
+        "height": 250
+      },
+      "other key": "other value"
+    },
+    "target" : {},
+    "privacy":"public"
+  }
 ```
 
 ### Verb
