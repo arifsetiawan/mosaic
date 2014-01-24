@@ -152,7 +152,23 @@ GET `http://localhost/mosaic/v1/user/id/activity`
 
 With paging
 
-`curl http://localhost/mosaic/v1/activity?limit=10&offset=2`
+`curl http://localhost/mosaic/v1/user/USERID/activity?limit=10&offset=2`
+
+With paging and show only users activity (not from his following)
+
+`curl http://localhost/mosaic/v1/user/USERID/activity?limit=10&offset=2&self=true`
+
+#### GET user specific activity (based on object type either from `target` or `object` in activity)
+
+GET `http://localhost/mosaic/v1/user/id/activity/objectType`
+
+With paging
+
+`curl http://localhost/mosaic/v1/user/USERID/activity/OBJECTTYPE?limit=10&offset=2`
+
+With paging and show only users activity (not from his following)
+
+`curl http://localhost/mosaic/v1/user/USERID/activity/OBJECTTYPE?limit=10&offset=2&self=true`
 
 #### GET followings
 
