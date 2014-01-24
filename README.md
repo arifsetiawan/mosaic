@@ -60,7 +60,7 @@ User empty json object if `target` is not exists
   }
 
 ```
-
+ 
 ```
   {
     "title": "Helmi follow Andri",
@@ -128,42 +128,44 @@ Mosaic is handling specific verbs such as:
 
 Insert new activity
 
-`POST http://localhost/mosaic/v1/activity`
+POST `http://localhost/mosaic/v1/activity`
 
-POST body example as shown in Standard activity item above
+`curl -X POST http://localhost/mosaic/v1/activity -d {Activity JSON}`
+
+POST body `{Activity JSON}` example as shown in Standard activity item above
 
 #### GET Activity
 
 Get list of all public activity
 
-`GET http://localhost/mosaic/v1/activity`
+GET `http://localhost/mosaic/v1/activity`
 
 With paging
 
-curl http://localhost/mosaic/v1/activity?limit=10&offset=2
+`curl http://localhost/mosaic/v1/activity?limit=10&offset=2`
 
 #### GET user activity
 
 Get list of all user activity (including from users that he/she follow if it's privacy set to friend)
 
-`GET http://localhost/mosaic/v1/user/id/activity`
+GET `http://localhost/mosaic/v1/user/id/activity`
 
 With paging
 
-curl http://localhost/mosaic/v1/activity?limit=10&offset=2
+`curl http://localhost/mosaic/v1/activity?limit=10&offset=2`
 
 #### GET followings
 
-`GET http://localhost/mosaic/v1/user/id/following`
+GET `http://localhost/mosaic/v1/user/id/following`
 
 #### GET followers
 
-`GET http://localhost/mosaic/v1/user/id/follower`
+GET `http://localhost/mosaic/v1/user/id/follower`
 
-#### DROP database (clear all) 
+#### DROP database (Will remove all data) 
 
-POST http://localhost/mosaic/v1/drop/activity 
-Header Client-Id=SOMETOKEN
+Use header `Client-Id`.
 
-POST http://localhost/mosaic/v1/drop/user 
-Header Client-Id=SOMETOKEN
+`curl -H "Client-Id: SOMETOKEN" -X POST http://localhost/mosaic/v1/drop/activity`
+
+`curl -H "Client-Id: SOMETOKEN" -X POST http://localhost/mosaic/v1/drop/user`
