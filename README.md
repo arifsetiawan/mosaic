@@ -138,11 +138,19 @@ Get list of all public activity
 
 `GET http://localhost/mosaic/v1/activity`
 
+With paging
+
+curl http://localhost/mosaic/v1/activity?limit=10&offset=2
+
 #### GET user activity
 
 Get list of all user activity (including from users that he/she follow if it's privacy set to friend)
 
 `GET http://localhost/mosaic/v1/user/id/activity`
+
+With paging
+
+curl http://localhost/mosaic/v1/activity?limit=10&offset=2
 
 #### GET followings
 
@@ -151,3 +159,11 @@ Get list of all user activity (including from users that he/she follow if it's p
 #### GET followers
 
 `GET http://localhost/mosaic/v1/user/id/follower`
+
+#### DROP database (clear all) 
+
+POST http://localhost/mosaic/v1/drop/activity 
+Header Client-Id=SOMETOKEN
+
+POST http://localhost/mosaic/v1/drop/user 
+Header Client-Id=SOMETOKEN
