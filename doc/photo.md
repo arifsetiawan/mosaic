@@ -63,7 +63,7 @@ Required activity field
 
 ### Return body
 
-Upon succesfull upload, activity will contain image url
+Upon succesfull upload, activity will contain image url and credentials is removed.
 
 ```
 {
@@ -80,11 +80,6 @@ Upon succesfull upload, activity will contain image url
           "url": "http://example.org/user/thumbnail.jpg",
           "width": 250,
           "height": 250
-        },
-        "credentials": {
-          "provider": "twitter",
-          "token": "250539439-LUx5znSqMkHeahWzUVTEJtRJQunSJg2Ay0IEhbSE",
-          "tokenParam": "jWHIZr0XplXLo4XtkAo2eZNiBc5HlkkaST56dsK9B8"
         }
       },
       "verb": "post",
