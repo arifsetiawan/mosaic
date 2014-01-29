@@ -125,5 +125,5 @@ Mosaic is handling specific verbs such as:
 
 ## API
 
-[Mosaic API](https://github.com/arifsetiawan/mosaic/blob/master/doc/api.md)
-[Comments](https://github.com/arifsetiawan/mosaic/blob/master/doc/comment.md)
+* [Mosaic API](https://github.com/arifsetiawan/mosaic/blob/master/doc/api.md)
+* [Comments](https://github.com/arifsetiawan/mosaic/blob/master/doc/comment.md)
