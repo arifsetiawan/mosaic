@@ -9,6 +9,11 @@ Simple Node.js based social graph and activity stream API server
 * user activity stream (insert and get)
 * maintain user following followers
 
+## API
+
+* [Mosaic API](https://github.com/arifsetiawan/mosaic/blob/master/doc/api.md)
+* [Comments](https://github.com/arifsetiawan/mosaic/blob/master/doc/comment.md)
+
 ## Activity Stream
 
 Mosaic do not handle the details of the activity stream. It simply just doing insert and get on them. It defines some necessary field to make some query easier. 
@@ -122,8 +127,3 @@ Mosaic is handling specific verbs such as:
 * `public` will be shown to all users
 * `private` will be available only to user who do the activity
 * `friend` will be available to user who do the activity and his/her followers
-
-## API
-
-* [Mosaic API](https://github.com/arifsetiawan/mosaic/blob/master/doc/api.md)
-* [Comments](https://github.com/arifsetiawan/mosaic/blob/master/doc/comment.md)
