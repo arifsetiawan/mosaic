@@ -19,14 +19,16 @@ Simple Node.js based social graph and activity stream API server
 
 Mosaic do not handle the details of the activity stream. It simply just doing insert and get on them. It defines some necessary field to make some query easier. 
 
-Mosaic follows [Activity Streams definition of activity](http://activitystrea.ms/specs/json/1.0/)
+Mosaic follows [Activity Streams definition of activity](http://tools.ietf.org/id/draft-snell-activitystreams-05.html)
 
 ### Standard activity item
 
-Required field in activity are : `title`, `actor`, `verb`, `object`, `target`, `privacy`.
-Refer to [Activity Serialization](http://activitystrea.ms/specs/json/1.0/#activity) for details about each field.
+Required field in activity are : `title`, `actor`, `verb`, `object`, `target`.
+Refer to [Activity Serialization](http://tools.ietf.org/id/draft-snell-activitystreams-05.html#rfc.section.3.5) for details about each field.
 
 `actor`, `object` and `target` MUST have id field. Application are free to add other fields. 
+
+`privacy` mandatory additional field.
 
 User empty json object if `target` is not exists
 
