@@ -10,9 +10,9 @@ Insert new activity
 
 POST `http://localhost/mosaic/v1/activity`
 
-`curl -X POST http://localhost/mosaic/v1/activity -d {Activity JSON}`
+`curl -H "Content-Type: application/json" -X POST http://localhost/mosaic/v1/activity -d {Activity JSON}`
 
-POST body `{Activity JSON}` example as shown in Standard activity item above
+POST body `{Activity JSON}` example as shown in Standard activity item above. Make sure to use header: `Content-Type: application/json`. 
 
 #### GET Activity
 

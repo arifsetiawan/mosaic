@@ -13,6 +13,7 @@ Simple Node.js based social graph and activity stream API server
 
 * [Mosaic API](https://github.com/arifsetiawan/mosaic/blob/master/doc/api.md)
 * [Comments](https://github.com/arifsetiawan/mosaic/blob/master/doc/comment.md)
+* [Upload photo](https://github.com/arifsetiawan/mosaic/blob/master/doc/photo.md)
 
 ## Activity Stream
 
@@ -127,3 +128,7 @@ Mosaic is handling specific verbs such as:
 * `public` will be shown to all users
 * `private` will be available only to user who do the activity
 * `friend` will be available to user who do the activity and his/her followers
+
+### Mandatory Fields
+
+Current implementation do not enforce some fields that should be existing in activity JSON body required for certain operations. Please read the documentation to make sure all fields are provided.
