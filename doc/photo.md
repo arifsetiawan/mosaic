@@ -2,6 +2,8 @@
 Post Photo
 =========
 
+POST `http://localhost/mosaic/v1/activity`
+
 Mosaic support upload image as activity using `Content-Type: multipart/form-data`.
 Note that standard insert activity operation is using `Content-Type: application/json`.
 
@@ -59,3 +61,47 @@ Required activity field
 * `object.description`
 * `object.share` should equal to `actor.credentials.provider`
 
+### Return body
+
+Upon succesfull upload, activity will contain image url
+
+```
+{
+  "status": "OK",
+  "message": "New activity added",
+  "data": [
+    {
+      "title": "Helmi post new photo",
+      "actor": {
+        "objectType": "user",
+        "id": "user:id:123",
+        "displayName": "Kang Helmi",
+        "image": {
+          "url": "http://example.org/user/thumbnail.jpg",
+          "width": 250,
+          "height": 250
+        },
+        "credentials": {
+          "provider": "twitter",
+          "token": "250539439-LUx5znSqMkHeahWzUVTEJtRJQunSJg2Ay0IEhbSE",
+          "tokenParam": "jWHIZr0XplXLo4XtkAo2eZNiBc5HlkkaST56dsK9B8"
+        }
+      },
+      "verb": "post",
+      "object": {
+        "objectType": "photo",
+        "id": "photo:id:123",
+        "description": "Some action on PVJ!",
+        "share": "twitter",
+        "image": {
+          "url": "http://jepretsupport.blob.core.windows.net/pulcher/528990fcf46bee0006000001/245383260987e59acf54bfd50ff3247a.jpg"
+        }
+      },
+      "target": {},
+      "privacy": "public",
+      "published": "2014-01-29T08:50:52.403Z",
+      "_id": "52e8c0ec4062ecbc1c5ee191"
+    }
+  ]
+}
+```
