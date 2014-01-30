@@ -24,7 +24,6 @@ With paging
 
 `curl http://localhost/mosaic/v1/activity?limit=10&offset=2`
 
-
 ## User
 
 #### GET user activity
@@ -53,6 +52,10 @@ With paging and show only users activity (not from his following)
 
 `curl http://localhost/mosaic/v1/user/USERID/activity/OBJECTTYPE?limit=10&offset=2&self=true`
 
+#### GET user data
+
+GET `http://localhost/mosaic/v1/user/id`
+
 #### GET followings
 
 GET `http://localhost/mosaic/v1/user/id/following`
@@ -61,6 +64,9 @@ GET `http://localhost/mosaic/v1/user/id/following`
 
 GET `http://localhost/mosaic/v1/user/id/follower`
 
+#### Check if user a follows user b
+
+GET `http://localhost/mosaic/v1/user/USER:A:ID/follows/USER:B:ID`
 
 ## Database
 

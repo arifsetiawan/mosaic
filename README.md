@@ -14,6 +14,11 @@ Simple Node.js based social graph and activity stream API server
 * [Mosaic API](https://github.com/arifsetiawan/mosaic/blob/master/doc/api.md)
 * [Comments](https://github.com/arifsetiawan/mosaic/blob/master/doc/comment.md)
 * [Upload photo](https://github.com/arifsetiawan/mosaic/blob/master/doc/photo.md)
+* [Activity check](https://github.com/arifsetiawan/mosaic/blob/master/doc/activitycheck.md)
+
+## Wiki
+
+[Wiki is available here](https://github.com/arifsetiawan/mosaic/wiki). 
 
 ## Activity Stream
 
@@ -23,15 +28,9 @@ Mosaic follows [Activity Streams definition of activity](http://tools.ietf.org/i
 
 ### Standard activity item
 
-Required field in activity are : `title`, `actor`, `verb`, `object`, `target`.
-Refer to [Activity Serialization](http://tools.ietf.org/id/draft-snell-activitystreams-05.html#rfc.section.3.5) for details about each field.
+Refer to [Activity Serialization](http://tools.ietf.org/id/draft-snell-activitystreams-05.html#rfc.section.3.5) for details about each fields in activity stream.
 
-`actor`, `object` and `target` MUST have id field. Application are free to add other fields. 
-
-`privacy` mandatory additional field.
-
-User empty json object if `target` is not exists
-
+Check in [Activity check](https://github.com/arifsetiawan/mosaic/blob/master/doc/activitycheck.md) for fields that required for specific activity verb and object.
 
 ```
   {
@@ -69,7 +68,7 @@ User empty json object if `target` is not exists
   }
 
 ```
- 
+
 ```
   {
     "title": "Helmi follow Andri",
@@ -107,7 +106,7 @@ Applications are free to use any verbs such as: post, follow, unfollow, plan, wa
 
 Mosaic is handling specific verbs such as:
 
-* `folllow` and `unfollow`. Use to set following and follower lists. This will affect what activity specific user can see
+* `follow` and `unfollow`. Use to set following and follower lists. This will affect what activity specific user can see
 
 ### Title Example Breakdown
 
@@ -125,11 +124,6 @@ Mosaic is handling specific verbs such as:
 * object : Andri
 * target : None
 
-### Privacy
-
-* `public` will be shown to all users
-* `private` will be available only to user who do the activity
-* `friend` will be available to user who do the activity and his/her followers
 
 ### Mandatory Fields
 
