@@ -22,9 +22,9 @@ Simple Node.js based social graph and activity stream API server
 
 ## Activity Stream
 
-Mosaic do not handle the details of the activity stream. It simply just doing insert and get on them. It defines some necessary field to make some query easier. 
+Mosaic do not handle the details of the activity stream. It simply just doing insert and get on them. It defines some necessary field to make some queries easier. 
 
-Mosaic follows [Activity Streams definition of activity](http://tools.ietf.org/id/draft-snell-activitystreams-05.html)
+Mosaic loosely follows [Activity Streams definition of activity](http://tools.ietf.org/id/draft-snell-activitystreams-05.html)
 
 ### Standard activity item
 
@@ -124,6 +124,14 @@ Mosaic is handling specific verbs such as:
 * object : Andri
 * target : None
 
+### Privacy options
+
+* `public` will be shown to all users. Default privacy setting.
+* `private` will be available only to user who do the activity
+* `follower` will be available to user who do the activity and his/her followers
+* `friend` will be available to user who do the activity and his/her mutual following-followers
+
+Every `friend` is a `follower` but not every `follower` is a `friend`
 
 ### Mandatory Fields
 

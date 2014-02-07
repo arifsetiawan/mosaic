@@ -2,7 +2,7 @@
 Mosaic Activity check
 =====================
 
-Mosaic impose some required fields to process activities. Mosaic will return error is requirements are not met.
+Mosaic impose some required fields to process activities. Mosaic will return error if the requirements are not met.
 
 ## Required Activity fields
 
@@ -23,7 +23,8 @@ Mosaic impose some required fields to process activities. Mosaic will return err
 
 * `public` will be shown to all users. Default privacy setting.
 * `private` will be available only to user who do the activity
-* `friend` will be available to user who do the activity and his/her followers
+* `follower` will be available to user who do the activity and his/her followers
+* `friend` will be available to user who do the activity and his/her mutual following-followers
 
 ## Required Actor fields
 
