@@ -133,6 +133,6 @@ Mosaic is handling specific verbs such as:
 
 Every `friend` is a `follower` but not every `follower` is a `friend`
 
-### Mandatory Fields
+### Required Fields
 
-Current implementation do not enforce some fields that should be existing in activity JSON body required for certain operations. Please read the documentation to make sure all fields are provided.
+Current implementation enforce some fields that should be existing in activity JSON body required for certain operations. Please refer to [Activity check](https://github.com/arifsetiawan/mosaic/blob/master/doc/activitycheck.md) to make sure all required fields are provided.
