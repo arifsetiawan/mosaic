@@ -40,11 +40,13 @@ With paging
 
 `curl http://localhost/mosaic/v1/home/activity?limit=10&offset=2`
 
+With `Movreak-Id`
+
 `curl -H "Movreak-Id: MovreakUserId" http://localhost/mosaic/v1/home/activity?limit=10&offset=2`
 
 `Movreak-Id` header rules : 
 
-* If header `Movreak-Id` is set : return current user activities with all followings
+* If header `Movreak-Id` is set : return current user activities with all his/her (public, follower) followings activities and (public, follower, friend) friends activities
 * If not set : return public activities (for user that is not logged in yet)
 
 #### GET user activity
@@ -56,6 +58,8 @@ GET `http://localhost/mosaic/v1/user/USERID/activity`
 With paging
 
 `curl http://localhost/mosaic/v1/user/USERID/activity?limit=10&offset=2`
+
+With `Movreak-Id`
 
 `curl -H "Movreak-Id: MovreakUserId" http://localhost/mosaic/v1/user/USERID/activity?limit=10&offset=2`
 
