@@ -28,7 +28,7 @@ GET `http://localhost/mosaic/v1/activity`
 
 #### User header 
 
-If request sent with header `Movreak-Id: MovreakUserId`, Mosaic will use `MovreakUserId` as reference to current active user.
+If request sent with header `Movreak-Uid: MovreakUserId`, Mosaic will use `MovreakUserId` as reference to current active user.
 
 #### GET home Activity
 
@@ -40,13 +40,13 @@ With paging
 
 `curl http://localhost/mosaic/v1/home/activity?limit=10&offset=2`
 
-With `Movreak-Id`
+With `Movreak-Uid`
 
-`curl -H "Movreak-Id: MovreakUserId" http://localhost/mosaic/v1/home/activity?limit=10&offset=2`
+`curl -H "Movreak-Uid: MovreakUserId" http://localhost/mosaic/v1/home/activity?limit=10&offset=2`
 
-`Movreak-Id` header rules : 
+`Movreak-Uid` header rules : 
 
-* If header `Movreak-Id` is set : return current user activities with all his/her (public, follower) followings activities and (public, follower, friend) friends activities
+* If header `Movreak-Uid` is set : return current user activities with all his/her (public, follower) followings activities and (public, follower, friend) friends activities
 * If not set : return public activities (for user that is not logged in yet)
 
 #### GET user activity
@@ -59,16 +59,16 @@ With paging
 
 `curl http://localhost/mosaic/v1/user/USERID/activity?limit=10&offset=2`
 
-With `Movreak-Id`
+With `Movreak-Uid`
 
-`curl -H "Movreak-Id: MovreakUserId" http://localhost/mosaic/v1/user/USERID/activity?limit=10&offset=2`
+`curl -H "Movreak-Uid: MovreakUserId" http://localhost/mosaic/v1/user/USERID/activity?limit=10&offset=2`
 
-`Movreak-Id` header rules : 
+`Movreak-Uid` header rules : 
 
-* If `Movreak-Id` is equal to `USERID` : return all (public, private, friend, follower) current active user activities
-* If `Movreak-Id` is equal not to `USERID` : return `USERID` activities based on : 
-  * if `Movreak-Id` is following `USERID` : return `USERID` public and follower activities
-  * if `Movreak-Id` is friend with `USERID` : return `USERID` public, friend, follower activities
+* If `Movreak-Uid` is equal to `USERID` : return all (public, private, friend, follower) current active user activities
+* If `Movreak-Uid` is equal not to `USERID` : return `USERID` activities based on : 
+  * if `Movreak-Uid` is following `USERID` : return `USERID` public and follower activities
+  * if `Movreak-Uid` is friend with `USERID` : return `USERID` public, friend, follower activities
   * else : return `USERID` public activities
 
 #### GET user specific activity (based on object type either from `target` or `object` in activity)
@@ -79,7 +79,7 @@ With paging
 
 `curl http://localhost/mosaic/v1/user/USERID/activity/OBJECTTYPE?limit=10&offset=2`
 
-`Movreak-id` rules above are applied.
+`Movreak-Uid` rules above are applied.
 
 ## User Data
 
