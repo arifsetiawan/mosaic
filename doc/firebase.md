@@ -162,4 +162,4 @@ In Mary page. text would be : [John](http://example.org/profile/user:id:123) sen
 
 In some cases, it is desirable to show the text in passive form: **John send message to you** into **You received a message from John** 
 
-Note that, it is up to you to add whatever fields necessary to construct the sentence. 
+Note that, it is **up to you** to add whatever fields necessary to construct the sentence. You only need to make sure to follow [activity checking standard](activitycheck.md).
