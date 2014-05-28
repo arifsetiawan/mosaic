@@ -12,9 +12,9 @@ POST `http://localhost/mosaic/v1/activity`
 
 `curl -H "Content-Type: application/json" -X POST http://localhost/mosaic/v1/activity -d {Activity JSON}`
 
-POST body `{Activity JSON}` example as shown in [Standard activity]((https://github.com/arifsetiawan/mosaic/blob/master/README.md)). Make sure to use header: `Content-Type: application/json`. 
+POST body `{Activity JSON}` example as shown in [Standard activity](../README.md). Make sure to use header: `Content-Type: application/json`. 
 
-For post photo activity, refer to [Upload photo](https://github.com/arifsetiawan/mosaic/blob/master/doc/photo.md)
+For post photo activity, refer to [Upload photo](photo.md)
 
 #### GET Activity (deprecated)
 

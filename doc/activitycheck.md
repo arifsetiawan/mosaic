@@ -6,12 +6,14 @@ Mosaic impose some required fields to process activities. Mosaic will return err
 
 ## Required Activity fields
 
-* `title` - String summarized the activity 
-* `actor` - Actor of the activity (JSON object)
-* `verb` - String describing the action. Note that `verb` must be string
-* `object` - Object of the activity (JSON object)
+* `title` - String summarized the activity.
+* `actor` - Describes one or more entities that either peformed or are expected to perform the activity. Actor of the activity (JSON object)
+* `verb` - Identifies the type of activity. String describing the action. Note that `verb` must be string.
+* `object` - Describes the primary object of the activity. Object of the activity (JSON object)
 
 ### `Target` field
+
+`target` Describes the target of the activity. The precise meaning of the activity's target is dependent on the activities "verb", but will often be the object the English preposition "to".
 
 `target` field is required only for some activities type, such as `post comment`
 
@@ -46,6 +48,8 @@ Post comment required `target` field in activity
 `target.id` must be 24 length string Mongodb _id (for example: '52ea6cbb4a94b10c1ee86369')
 
 ## Post photo activity
+
+Post photo is using Jepret platform.
 
 `activity.actor` must contain `credentials`.
 

@@ -11,14 +11,15 @@ Simple Node.js based social graph and activity stream API server
 
 ## API
 
-* [Mosaic API](https://github.com/arifsetiawan/mosaic/blob/master/doc/api.md)
-* [Comments](https://github.com/arifsetiawan/mosaic/blob/master/doc/comment.md)
-* [Upload photo](https://github.com/arifsetiawan/mosaic/blob/master/doc/photo.md)
-* [Activity check](https://github.com/arifsetiawan/mosaic/blob/master/doc/activitycheck.md)
+* [Mosaic API](doc/api.md)
+* [Comments](doc/comment.md)
+* [Upload photo](doc/photo.md)
+* [Activity check](doc/activitycheck.md)
+* [Firebase](doc/firebase.md)
 
-## Wiki
+**IMPORTANT**
 
-[Wiki is available here](https://github.com/arifsetiawan/mosaic/wiki). 
+Read [here first for PMJ styled Mosaic documentation](doc/pmj.md)
 
 ## Activity Stream
 
@@ -30,7 +31,7 @@ Mosaic loosely follows [Activity Streams definition of activity](http://tools.ie
 
 Refer to [Activity Serialization](http://tools.ietf.org/id/draft-snell-activitystreams-05.html#rfc.section.3.5) for details about each fields in activity stream.
 
-Check in [Activity check](https://github.com/arifsetiawan/mosaic/blob/master/doc/activitycheck.md) for fields that required for specific activity verb and object.
+Check in [Activity check](doc/activitycheck.md) for fields that required for specific activity verb and object.
 
 ```
   {
@@ -135,4 +136,4 @@ Every `friend` is a `follower` but not every `follower` is a `friend`
 
 ### Required Fields
 
-Current implementation enforce some fields that should be existing in activity JSON body required for certain operations. Please refer to [Activity check](https://github.com/arifsetiawan/mosaic/blob/master/doc/activitycheck.md) to make sure all required fields are provided.
+Current implementation enforce some fields that should be existing in activity JSON body required for certain operations. Please refer to [Activity check](doc/activitycheck.md) to make sure all required fields are provided.
