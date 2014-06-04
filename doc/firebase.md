@@ -20,7 +20,7 @@ Currently firebase support direct notification actions with notification target 
 
 Refer to [PMJ reference](pmj.md) for PMJ styled activity example.
 
-You have to explicitly tell Mosaic to send notification to either `object` or `target` using `firebase` field in the activity data. 
+You have to explicitly tell Mosaic to send notification to either `object` or `target` using `notify` field in the activity data. 
 
 Currently, firebase integration do not support [post photo activity](photo.md)
 
@@ -30,7 +30,7 @@ Currently, firebase integration do not support [post photo activity](photo.md)
 
 ```
   {
-    "firebase": true,
+    "notify": true,
     "title": "John like Mary", 
     "actor": {
       "objectType": "user",
@@ -162,4 +162,4 @@ In Mary page. text would be : [John](http://example.org/profile/user:id:123) sen
 
 In some cases, it is desirable to show the text in passive form: **John send message to you** into **You received a message from John** 
 
-Note that, it is **up to you** to add whatever fields necessary to construct the sentence. You only need to make sure to follow [activity checking standard](activitycheck.md).
+Note that, it is **up to you** to add whatever fields necessary to construct the sentence. 
