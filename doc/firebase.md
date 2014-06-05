@@ -57,7 +57,6 @@ Currently, firebase integration do not support [post photo activity](photo.md)
       },
       "other key": "other value"
     },
-    "target" : {},
     "privacy":"public"
   }
 ```
@@ -97,7 +96,6 @@ With body
       },
       "other key": "other value"
     },
-    "target" : {},
     "privacy":"public"
   }
 ```
@@ -116,6 +114,7 @@ In Mary page. text would be : [John](http://example.org/profile/user:id:123) lik
 
 ```
   {
+    "notify": true,
     "title": "John post message to Mary",
     "actor": {
       "objectType": "user",

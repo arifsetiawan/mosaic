@@ -8,6 +8,10 @@ Mosaic do not maintain user data, as such, the client must submit necessary info
 
 Note that this Uid must be the same as `id` in `actor` field of the Activity Stream. 
 
+## Privacy
+
+By default, all PMJ activity are **private** to the actor and object/target of the activity.
+
 ## Some of the pmj activity
 
 * John like Mary profile
@@ -61,7 +65,7 @@ Note that you can add any field in `actor`, `object` or `target`. Mosaic will ju
       },
     },
     "target" : {},
-    "privacy":"public"
+    "privacy":"private"
   }
 ```
 
@@ -106,6 +110,6 @@ Here John (actor) post (verb) message (object) to Mary (target)
         "height": 250
       }
     },
-    "privacy":"public"
+    "privacy":"private"
   }
 ```
